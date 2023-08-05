@@ -1,0 +1,32 @@
+{
+  "name": "emoji-sequences-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:uniqueEmojiList": "npm run build && \"ts-node\" src/index.ts --uniqueEmojiList",
+    "run:uniqueEmojiListCodePoint": "npm run build && \"ts-node\" src/index.ts --uniqueEmojiList --codePoint",
+    "run:uniqueEmojiListSurrogatePair": "npm run build && \"ts-node\" src/index.ts --uniqueEmojiList --surrogatePair",
+    "run:emojiRegexPatternJs": "npm run build && \"ts-node\" src/index.ts --emojiRegexPattern --javaScript",
+    "run:emojiRegexPatternJava": "npm run build && \"ts-node\" src/index.ts --emojiRegexPattern --java",
+    "build": "tsc -p .",
+    "build:watch": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "unicode",
+    "emoji",
+    "sequence",
+    "parser"
+  ],
+  "author": "samunohito",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.6",
+    "@types/yargs": "^17.0.24",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "yargs": "^17.7.2"
+  }
+}
